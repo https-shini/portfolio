@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+html{
+    overflow: hidden;
+	scroll-behavior: smooth;
+
+	/* =====   Colors   ===== */
+	--black-clr: #101112;
+	--bg-clr-one: #101112;
+	--bg-clr-two: #1e1e1e;
+	--primary-clr: #CB4335;
+	--primary-heading-clr: #e2e2e2;
+	--secondary-heading-clr: #adb5bd;
+	--text-clr: #6b7279;
+    
+    /* =====   Font Sizes   ===== */
+	--text-fontSize: 17px;
+	--btn-fontSize: 18px;
+	--large-heading: 32px;
+}
+
+body{
+	width: 100%;
+	min-height: 100vh;
+    background-color: #101112;
+}
+
+/*  navbar   inicio*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu';
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+     background: #CB4335;
+     padding: 15px 0;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 300px;
+}
+.navbar .logo a span{
+    color: #CB4335;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #CB4335;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/*  *******   Resume Section Styling Starts   *******  */
+
+.resumeSection{
+	width: 100%;
+	padding: 75px 8% 60px;
+    background-color: var(--bg-clr-one);
+	font-family: 'Poppins', sans-serif;
+}
+.resumeSection .resumeTitle{
+	max-width: 700px;
+	margin: 0px auto 45px;
+	text-align: center;
+}
+.resumeSection .resumeTitle h1{
+	position: relative;
+	display: inline-block;
+	font-size: var(--large-heading);
+	color: var(--primary-heading-clr);
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+.resumeSection .resumeTitle h1::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	top: 120%;
+	left: 0;
+	background-color: var(--secondary-heading-clr);
+}
+.resumeSection .resumeTitle h1::after{
+	content: '';
+	position: absolute;
+	width: 40%;
+	height: 3px;
+	top: calc(120% - 1px);
+	left: 0;
+	background-color: var(--primary-clr);
+}
+.resumeSection .resumeTitle p{
+	font-size: var(--text-fontSize);
+	color: var(--secondary-heading-clr);
+
+}
+.resumeSection .resumeContentsRow{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+}
+.resumeContentsRow .resumeEvenColumn{
+	background-color: var(--bg-clr-two);
+	padding: 20px 15px;
+	border-radius: 10px;
+	border: 1px solid #151515;
+}
+.resumeContentsRow .resumeEvenColumn .subTitle{
+	font-size: 20px;
+	color: var(--primary-heading-clr);
+	padding: 0px 0px 20px 20px;
+	text-transform: uppercase;
+}
+.resumeEvenColumn .resumeContents .box{
+	position: relative;
+	padding: 0px 15px 25px 20px;
+	background-color: var(--bg-clr-two);
+	border-left: 2px solid var(--text-clr);
+}
+.resumeEvenColumn .resumeContents .box:nth-child(3){
+	padding-bottom: 0px;
+}
+.resumeEvenColumn .resumeContents .box::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	transform: translate(-50%, -10%);
+	background-color: var(--primary-clr);
+	border: 2px solid var(--bg-clr-two);
+}
+.resumeEvenColumn .resumeContents .box h4{
+	position: relative;
+	color: var(--primary-clr);
+}
+.resumeEvenColumn .resumeContents .box h3{
+	font-size: 19px;
+	padding: 10px 0px 6px;
+	color: var(--secondary-heading-clr);
+}
+.resumeEvenColumn .resumeContents .box p{
+	line-height: 1.2;
+	color: var(--text-clr);
+	font-size: var(--text-fontSize);
+}
+
+/*  *******   Resume Section Styling Ends   *******  */
+
+.textfield{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+	margin-left: 765px;
+}
+
+.textfield > input{
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.btn{
+    width: 300%;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #CB4335;
+    cursor: pointer;
+}
+
+.btn-voltar {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-150%);
+}
